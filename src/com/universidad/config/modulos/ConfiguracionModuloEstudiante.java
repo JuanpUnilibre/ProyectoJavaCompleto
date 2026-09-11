@@ -26,7 +26,7 @@ public class ConfiguracionModuloEstudiante
                 TpaRepositoryFactory.create(
                         Estudiante.class,
                         RutaPersistencia.ESTUDIANTES.obtenerRuta(),
-                        false
+                        true
                 );
 
         EstudianteMapeador mapeador =
