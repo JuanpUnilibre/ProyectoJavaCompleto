@@ -34,7 +34,7 @@ public class ConfiguracionDependencia implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
-        for (int i = modulosConfigurados.size(); i >= 0; i--) {
+        for (int i = modulosConfigurados.size() -1 ; i >= 0; i--) {
             ModuloConfigurable modulito = modulosConfigurados.get(i);
             modulito.cerrarRecursos();
         }
