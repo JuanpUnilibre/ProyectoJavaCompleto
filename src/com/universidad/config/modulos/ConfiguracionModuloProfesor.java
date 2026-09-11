@@ -18,10 +18,14 @@ public class ConfiguracionModuloProfesor implements ModuloConfigurable {
     private final ProfesorServicio servicio;
 
     public ConfiguracionModuloProfesor() {
+        
         TpaRepository<Profesor, Long> tpaEngine = TpaRepositoryFactory.create(
                 Profesor.class, RutaPersistencia.PROFESORES.obtenerRuta(), false);
+        
         ProfesorMapeador mapeador = new ProfesorMapeador();
+        
         repositorio = new ProfesorRepositorioImpl(tpaEngine);
+        
         servicio = new ProfesorServicio(mapeador, repositorio);
     }
 

@@ -1,6 +1,7 @@
 package com.universidad.config;
 
 import com.cleandev.cli.core.SystemModule;
+import com.universidad.config.modulos.ConfiguracionModuloEstudiante;
 import com.universidad.config.modulos.ConfiguracionModuloProfesor;
 import com.universidad.config.modulos.ModuloConfigurable;
 import java.util.ArrayList;
@@ -16,8 +17,15 @@ public class ConfiguracionDependencia implements AutoCloseable {
     public ConfiguracionDependencia() {
         ConfiguracionModuloProfesor confiProfe
                 = new ConfiguracionModuloProfesor();
+
         modulosConfigurados.add(confiProfe);
         modulos.add(confiProfe.construirVista());
+
+        ConfiguracionModuloEstudiante confiEstudiante
+                = new ConfiguracionModuloEstudiante();
+
+        modulosConfigurados.add(confiEstudiante);
+        modulos.add(confiEstudiante.construirVista());
     }
 
     public List<SystemModule> getModulos() {
@@ -30,7 +38,7 @@ public class ConfiguracionDependencia implements AutoCloseable {
             ModuloConfigurable modulito = modulosConfigurados.get(i);
             modulito.cerrarRecursos();
         }
+
         modulosConfigurados.clear();
     }
-
 }
