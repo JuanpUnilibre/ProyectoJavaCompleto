@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/config/ConfiguracionDependencia.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/modelo/Profesor.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/repositorio/cargador/ProfesorCargador.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/mapeador/Mapeador.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/dto/validacion/ReglasValidacion.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/persistencia/ProfesorRepositorioImpl.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/App.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/config/modulos/ConfiguracionModuloProfesor.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/modelo/convertidor/EstadoEntidadConverter.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/controlador/ProfesorControlador.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/repositorio/RepositorioBase.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/servicio/ProfesorServicio.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/modelo/Estudiante.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/vista/ProfesorVista.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/repositorio/ProfesorRepositorio.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/Pruebas%20folder/Java/poo_2026_quieroAprenderYa_2026_09_08_8am/poo_2026_quieroAprenderYa/src/com/universidad/repositorio/cargador/CargadorDatos.java</file>
         </group>
     </open-files>
