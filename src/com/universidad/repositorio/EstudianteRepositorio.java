@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.universidad.repositorio;
 
-/**
- *
- * @author Juan Pablo
- */
-public class EstudianteRepositorio {
-    
+import com.universidad.modelo.Estudiante;
+import java.util.UUID;
+
+public interface EstudianteRepositorio
+        extends RepositorioBase<Estudiante, UUID> {
 }

@@ -1,13 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.universidad.dto.estudiante;
 
-/**
- *
- * @author Juan Pablo
- */
-public class EstudianteCrearDto {
-    
+import com.universidad.dto.validacion.ReglasValidacion;
+
+public record EstudianteCrearDto(
+        String codigo,
+        String nombre,
+        String correo,
+        String celular,
+        String direccion) {
+
+    public EstudianteCrearDto {
+        codigo = ReglasValidacion.limpiarRequerido(
+                codigo,
+                "Codigo es obligatorio");
+
+        nombre = ReglasValidacion.limpiarRequerido(
+                nombre,
+                "Nombre es obligatorio");
+
+        correo = ReglasValidacion.limpiarCorreo(correo);
+
+        celular = ReglasValidacion.limpiarCelular(celular);
+
+        direccion = ReglasValidacion.limpiarRequerido(
+                direccion,
+                "Direccion es obligatoria");
+    }
 }

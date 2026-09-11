@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.universidad.dto.estudiante;
 
-/**
- *
- * @author Juan Pablo
- */
-public class EstudianteDto {
-    
+import com.universidad.modelo.enumeracion.EstadoEntidad;
+import java.util.UUID;
+
+public record EstudianteDto(
+        UUID id,
+        String codigo,
+        String nombre,
+        String correo,
+        String celular,
+        String direccion,
+        EstadoEntidad estado,
+        Boolean activo) {
+
 }
