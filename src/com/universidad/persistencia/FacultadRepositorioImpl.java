@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.universidad.persistencia;
 
-/**
- *
- * @author Juan Pablo
- */
-public class FacultadRepositorioImpl {
-    
+import com.cleandev.tpa.api.TpaRepository;
+import com.universidad.modelo.Facultad;
+import com.universidad.repositorio.FacultadRepositorio;
+
+public class FacultadRepositorioImpl
+        extends RepositorioBaseAbstracto<Facultad, Long>
+        implements FacultadRepositorio {
+
+    public FacultadRepositorioImpl(
+            TpaRepository<Facultad, Long> tpaRepository) {
+
+        super(tpaRepository);
+    }
 }

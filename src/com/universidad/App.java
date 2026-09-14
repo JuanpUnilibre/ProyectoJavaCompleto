@@ -7,32 +7,39 @@ import com.universidad.config.ConfiguracionDependencia;
 import java.util.List;
 
 public class App {
-    
+
     public static void main(String[] args) {
         try {
+
+            System.setOut(new java.io.PrintStream(
+                    System.out,
+                    true,
+                    java.nio.charset.StandardCharsets.UTF_8
+            ));
+
             iniciarAplicacion();
-            
+
         } catch (Exception e) {
             System.err.println("ERROR: No se puede iniciar la App");
             System.err.println(e.getMessage());
             System.exit(1);
         }
     }
-    
+
     private static void iniciarAplicacion() {
         CliConfig cliConfig = AppScannerCli.configuracionCompleta();
         CliEngine motorConsola = new CliEngine(cliConfig);
-        
+
         ConfiguracionDependencia config = new ConfiguracionDependencia();
         registrarModulos(motorConsola, config);
         motorConsola.start();
     }
-    
+
     private static void registrarModulos(CliEngine motorConsola, ConfiguracionDependencia config) {
         List<SystemModule> modulos = config.getModulos();
         for (SystemModule modulo : modulos) {
             motorConsola.registerModule(modulo);
         }
     }
-    
+
 }
