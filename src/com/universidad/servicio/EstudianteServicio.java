@@ -18,7 +18,7 @@ public class EstudianteServicio {
             EstudianteRepositorio repositorio) {
 
         if (repositorio == null) {
-            throw new IllegalArgumentException("pailas con el repo");
+            throw new IllegalArgumentException("Error en el Repositorio");
         }
 
         if (mapeador == null) {

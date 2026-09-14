@@ -14,7 +14,7 @@ public class ProfesorServicio {
 
     public ProfesorServicio(ProfesorMapeador mapeador, ProfesorRepositorio repositorio) {
         if (repositorio == null) {
-            throw new IllegalArgumentException("pailas con el repo");
+            throw new IllegalArgumentException("Error en el repositorio");
         }
         if (mapeador == null) {
             throw new IllegalArgumentException("Mapeador vacio");
