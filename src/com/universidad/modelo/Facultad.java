@@ -42,7 +42,7 @@ public class Facultad {
         this.codigoFacultad = codigoFacultad;
         this.nombreFacultad = nombreFacultad;
         this.descripcionFacultad = descripcionFacultad;
-        this.estadoFacultad = estadoFacultad;
+        this.estadoFacultad = (estadoFacultad != null) ? estadoFacultad:EstadoEntidad.ACTIVO;
 
         if (idFacultad == null) {
             throw new IllegalArgumentException("El id de la facultad es obligatorio en Hidratacion");
