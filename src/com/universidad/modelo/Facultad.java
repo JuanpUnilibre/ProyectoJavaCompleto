@@ -11,8 +11,7 @@ public class Facultad {
     private String codigoFacultad;
     private String nombreFacultad;
     private String DescripcionFacultad;
-
-    
+ 
     @TpaConvert(converter = EstadoEntidadConverter.class)
     private EstadoEntidad estadoFacultad;
     
