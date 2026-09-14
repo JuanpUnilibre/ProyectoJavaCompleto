@@ -6,28 +6,31 @@ import com.universidad.modelo.convertidor.EstadoEntidadConverter;
 import com.universidad.modelo.enumeracion.EstadoEntidad;
 
 public class Facultad {
+
     @TpaId
     private Long idFacultad;
     private String codigoFacultad;
     private String nombreFacultad;
     private String descripcionFacultad;
- 
+
     @TpaConvert(converter = EstadoEntidadConverter.class)
     private EstadoEntidad estadoFacultad;
-    
+
     //Reflexion
-    protected Facultad(){
+    protected Facultad() {
     }
 
     //Creacion
     public Facultad(
             String codigoFacultad,
-            String nombreFacultad) {
+            String nombreFacultad,
+            String descripcionFacultad) {
         this.codigoFacultad = codigoFacultad;
         this.nombreFacultad = nombreFacultad;
-        this.estadoFacultad = estadoFacultad.ACTIVO;
+        this.descripcionFacultad = descripcionFacultad;
+        this.estadoFacultad = EstadoEntidad.ACTIVO;
     }
-    
+
     //Hidratacion
     public Facultad(
             Long idFacultad,
@@ -40,26 +43,26 @@ public class Facultad {
         this.nombreFacultad = nombreFacultad;
         this.descripcionFacultad = descripcionFacultad;
         this.estadoFacultad = estadoFacultad;
-        
-        if(idFacultad == null){
+
+        if (idFacultad == null) {
             throw new IllegalArgumentException("El id de la facultad es obligatorio en Hidratacion");
         }
-        
+
         this.idFacultad = idFacultad;
     }
-    
+
     //Metodos de comportamiento
-    public void actualizarNombre(String nuevoNombre){
-        if(nuevoNombre.equalsIgnoreCase(this.nombreFacultad)){
+    public void actualizarNombre(String nuevoNombre) {
+        if (nuevoNombre.equalsIgnoreCase(this.nombreFacultad)) {
             throw new IllegalArgumentException("Los nombres son iguales");
         }
-        this.nombreFacultad=nuevoNombre;
+        this.nombreFacultad = nuevoNombre;
     }
-    
+
     public void cambiarEstado(EstadoEntidad nuevoEstado) {
         this.estadoFacultad = estadoFacultad.cambiarEstadoA(nuevoEstado);
     }
-    
+
     //Metodos de consulta
     public boolean estaActivo() {
         return this.estadoFacultad == EstadoEntidad.ACTIVO;

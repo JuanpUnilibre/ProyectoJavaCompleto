@@ -22,7 +22,7 @@ public class Profesor {
     public Profesor(String nombreProfesor, String celularProfesor) {
         this.nombreProfesor = nombreProfesor;
         this.celularProfesor = celularProfesor;
-        this.estadoProfesor = estadoProfesor.ACTIVO;
+        this.estadoProfesor = EstadoEntidad.ACTIVO;
     }
     
     //hidratacion
