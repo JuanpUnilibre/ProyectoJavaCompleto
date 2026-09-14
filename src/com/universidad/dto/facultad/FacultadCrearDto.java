@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.universidad.dto.facultad;
 
-/**
- *
- * @author Juan Pablo
- */
-public class FacultadCrearDto {
-    
+import com.universidad.dto.validacion.ReglasValidacion;
+
+public record FacultadCrearDto(
+        String codigo,
+        String nombre,
+        String descripcion) {
+
+    public FacultadCrearDto {
+        codigo = ReglasValidacion.limpiarRequerido(
+                codigo,
+                "Codigo es obligatorio");
+
+        nombre = ReglasValidacion.limpiarRequerido(
+                nombre,
+                "Nombre es obligatorio");
+
+        descripcion = ReglasValidacion.limpiarRequerido(
+                descripcion,
+                "Descripcion es obligatoria");
+    }
 }

@@ -10,7 +10,7 @@ public class Facultad {
     private Long idFacultad;
     private String codigoFacultad;
     private String nombreFacultad;
-    private String DescripcionFacultad;
+    private String descripcionFacultad;
  
     @TpaConvert(converter = EstadoEntidadConverter.class)
     private EstadoEntidad estadoFacultad;
@@ -22,11 +22,10 @@ public class Facultad {
     //Creacion
     public Facultad(
             String codigoFacultad,
-            String nombreFacultad,
-            String DescripcionFacultad) {
+            String nombreFacultad) {
         this.codigoFacultad = codigoFacultad;
         this.nombreFacultad = nombreFacultad;
-        this.DescripcionFacultad = DescripcionFacultad;
+        this.estadoFacultad = estadoFacultad.ACTIVO;
     }
     
     //Hidratacion
@@ -34,12 +33,12 @@ public class Facultad {
             Long idFacultad,
             String codigoFacultad,
             String nombreFacultad,
-            String DescripcionFacultad,
+            String descripcionFacultad,
             EstadoEntidad estadoFacultad) {
 
         this.codigoFacultad = codigoFacultad;
         this.nombreFacultad = nombreFacultad;
-        this.DescripcionFacultad = DescripcionFacultad;
+        this.descripcionFacultad = descripcionFacultad;
         this.estadoFacultad = estadoFacultad;
         
         if(idFacultad == null){
@@ -80,7 +79,7 @@ public class Facultad {
     }
 
     public String getDescripcionFacultad() {
-        return DescripcionFacultad;
+        return descripcionFacultad;
     }
 
     public EstadoEntidad getEstadoFacultad() {
